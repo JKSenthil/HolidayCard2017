@@ -56,11 +56,11 @@ void setup(){
   size(1000, 600);
   
   //jersey set up
-  one = loadImage("one.png");
-  two = loadImage("two.png");
+  one = loadImage("data/one.png");
+  two = loadImage("data/two.png");
   
-  mainmenu = loadImage("MenuFinal.png");
-  gameover = loadImage("Gameover.png");
+  mainmenu = loadImage("data/MenuFinal.png");
+  gameover = loadImage("data/Gameover.png");
   
   b = createGraphics(width, height);
   drawBackground();
@@ -95,12 +95,12 @@ void setup(){
   p2Engine = new PhysicsEnginePlayer(player2Height, player2Width, p2x, p2y, height - 50, 0, width);
   
   //sound setup
-  file = new SoundFile(this, "music.mp3");
+  file = new SoundFile(this, "data/music.mp3");
   file.amp(0.5);
   file.play();
   
   //scoreboardsetup
-  scoreboard = loadImage("Scoreboard.png");
+  scoreboard = loadImage("data/Scoreboard.png");
   
   //font stuff
   f = createFont("Calibri", 32);
