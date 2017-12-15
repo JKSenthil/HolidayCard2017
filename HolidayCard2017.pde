@@ -7,8 +7,8 @@ PFont font;
 void setup(){
   size(800,800);
   bg = loadImage("https://get.wallhere.com/photo/landscape-mountains-digital-art-sea-night-pixel-art-lake-nature-reflection-sky-stars-clouds-Moon-blue-hills-evening-morning-coast-pixels-moonlight-horizon-atmosphere-dusk-cloud-dawn-ocean-wave-darkness-1920x1200-px-computer-wallpaper-wind-wave-630639.jpg");
-  bg.resize(800,800);
-  font=loadFont("SnellRoundhand-Bold-32.vlw");
+  bg.resize(height,width);
+  font=loadFont("data/SnellRoundhand-Bold-32.vlw");
   timer = new Timer();
   timer.start();
   fireworks = new ArrayList<Firework>();
@@ -23,7 +23,7 @@ void draw(){
   image(bg,0,0);
   
   fill(255,0,0);
-  text("Happy Hollidays", 100,550);
+  text("Happy Holidays", 100,550);
   for(Firework f : fireworks){
     if(f.isExplode() && !f.exploded){
       f.explode();
